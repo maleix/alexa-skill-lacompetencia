@@ -1,0 +1,161 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "la competencia",
+            "intents": [
+                {
+                    "name": "PlayDayIntent",
+                    "slots": [
+                        {
+                            "name": "Day",
+                            "type": "LIST_OF_DAYS",
+                            "samples": [
+                                "el {Day}",
+                                "{Day}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "reproduce el podcast del {Day}",
+                        "pon la del {Day}",
+                        "reproduce la del día {Day}",
+                        "reproduce la del {Day}",
+                        "reproduce el del {Day}",
+                        "pon el del {Day}",
+                        "reproduce el {Day}",
+                        "pon el {Day}",
+                        "pon el día {Day}",
+                        "del {Day}",
+                        "{Day}"
+                    ]
+                },
+                {
+                    "name": "PlayLastIntent",
+                    "slots": [],
+                    "samples": [
+                        "la última",
+                        "pon la de hoy",
+                        "pon el de hoy",
+                        "pon el más reciente",
+                        "de hoy",
+                        "pon el último podcast",
+                        "pon el último",
+                        "hoy",
+                        "el más reciente",
+                        "última",
+                        "último",
+                        "último podcast",
+                        "pon la última"
+                    ]
+                },
+                {
+                    "name": "SupportedDaysIntent",
+                    "slots": [],
+                    "samples": [
+                        "cuando",
+                        "disponibilidad",
+                        "que días hay disponibles"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_DAYS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "domingo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sabado"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lunes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "martes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "miercoles"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jueves"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "viernes"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PlayDayIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Day",
+                            "type": "LIST_OF_DAYS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.913538445930.1287005283141"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.913538445930.1287005283141",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Que dia te gustaria escuchar?"
+                    }
+                ]
+            }
+        ]
+    }
+}

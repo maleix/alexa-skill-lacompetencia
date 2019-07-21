@@ -1,0 +1,49 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "es-ES": {
+          "summary": "Últimos podcast de La Competencia de RAC1",
+          "examplePhrases": [
+            "Alexa, pon la competencia",
+            "Alexa, abre la competencia y pon del martes"
+          ],
+          "keywords": [
+            "podcast",
+            "rac1",
+            "competencia"
+          ],
+          "name": "La Competencia",
+          "description": "",
+          "smallIconUri": "https://www.rac1.cat/r/GODO/R1/p0/WebSite/Imagenes/2016/09/13/img_20180902-195956_lacompetencia-k5PH-U41278676158M5B-366x366@RAC1-Web.png",
+          "largeIconUri": "https://api.audioteca.rac1.cat/rsc/img/share/la-competencia.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "",
+      "category": "",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": ""
+        },
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

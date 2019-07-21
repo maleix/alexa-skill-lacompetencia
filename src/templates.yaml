@@ -1,0 +1,14 @@
+last_podcast: |
+    Reproduciendo el último podcast disponible de La Competencia de RAC1
+
+day_podcast: |
+    Reproduciendo podcast de La Competencia del último {{ day }}
+
+help: |
+    Puedes pedir un podcast de los últimos 7 días.
+    Por ejemplo diciendo, Alexa pon La Competencia del martes
+
+list_days: |
+    Únicamente hay programas de La Competencia de lunes a viernes
+
+list_days_reprompt: ¿Que día de La Competencia te gustaría escuchar?

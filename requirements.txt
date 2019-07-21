@@ -1,0 +1,3 @@
+flask-ask
+feedparser
+cryptography==2.1.4
