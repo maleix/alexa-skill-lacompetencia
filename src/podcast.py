@@ -1,18 +1,20 @@
 import feedparser
 from utils import get_day_correlation
 
-RSS_URL = "https://api.audioteca.rac1.cat/rss/la-competencia"
-
-RSS_PODCASTS = feedparser.parse(RSS_URL)
+def get_rss():
+    rss_url = "https://api.audioteca.rac1.cat/rss/la-competencia"
+    return feedparser.parse(rss_url)
 
 def get_last_podcast():
-    return RSS_PODCASTS['entries'][0]['link']
+    rss = get_rss()
+    return rss['entries'][0]['link']
 
 def get_podcast(day):
     rss_formatted_day = get_day_correlation(day) 
-    for i in range(len(RSS_PODCASTS['entries'])):
-        if rss_formatted_day in RSS_PODCASTS['entries'][i]['published']:
-            return RSS_PODCASTS['entries'][i]['link']
+    rss = get_rss()
+    for i in range(len(rss['entries'])):
+        if rss_formatted_day in rss['entries'][i]['published']:
+            return rss['entries'][i]['link']
     return -1
 
 def get_available_days():
@@ -24,4 +26,3 @@ def get_available_days():
         'viernes',
     ]
     return available_days
-
